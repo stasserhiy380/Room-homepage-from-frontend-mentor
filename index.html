@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0"
+  />
+  <title>Vite + Tailwind</title>
+</head>
+
+<body >
+
+<div class="lg:flex lg:flex-row">
+  <main id="hero" class="relative h-93 overflow-hidden lg:basis-3/5 lg:h-190 lg:overflow-visible">
+    <nav id="nav"
+         class="relative hidden flex flex-row items-center gap-16 px-6 py-12 z-50 bg-white md:justify-between md:px-16">
+      <button id="close-button" class="block lg:hidden"><img src="src/assets/close.svg" alt="close button"></button>
+      <ul class="flex flex-row gap-8  items-center">
+        <li><a class="text-[16px] font-semibold leading-[100%] tracking-[-0.7px]" href="#">home</a></li>
+        <li><a class="text-[16px] font-semibold leading-[100%] tracking-[-0.7px]" href="#">shop</a></li>
+        <li><a class="text-[16px] font-semibold leading-[100%] tracking-[-0.7px]" href="#">about</a></li>
+        <li><a class="text-[16px] font-semibold leading-[100%] tracking-[-0.7px]" href="#">contact</a></li>
+      </ul>
+    </nav>
+    <!-- Responsive hero image -->
+    <picture class="absolute inset-0">
+      <source
+              id="hero-desktop"
+              media="(min-width: 768px)"
+              srcset="/src/assets/desktop-image-hero-1.jpg"
+
+      >
+
+      <img
+              id="hero-image"
+              src="/src/assets/mobile-image-hero-1.jpg"
+              alt="Interior"
+              class="h-full w-full object-cover"
+      >
+    </picture>
+
+    <!-- Logo + menu -->
+    <div
+            id="logo"
+            class="relative z-10 flex items-center justify-center pt-12 lg:justify-normal lg:pt-16 lg:pl-18"
+    >
+      <button
+              id="open-button"
+              class="absolute left-6 block md:left-16 lg:hidden"
+      >
+        <img src="/src/assets/open.svg" alt="menu">
+      </button>
+
+      <div class="lg:flex lg:flex-row lg:gap-14 lg:items-center"><img
+              class="block"
+              src="/src/assets/Logo.svg"
+              alt="logo"
+      >
+        <ul class="hidden lg:flex lg:flex-row lg:items-center lg:gap-8">
+          <li>
+            <a
+                    href="#"
+                    class="
+        relative
+        text-[16px] font-semibold leading-[100%] tracking-[-0.7px] text-white
+
+        after:absolute
+        after:left-1/2
+        after:-bottom-3
+        after:h-[2px]
+        after:w-6
+        after:-translate-x-1/2
+        after:scale-x-0
+        after:bg-white
+        after:content-['']
+        after:transition-transform
+        after:duration-200
+
+        hover:after:scale-x-100">
+              home
+            </a>
+          </li>
+
+          <li>
+            <a
+                    href="#"
+                    class="
+        relative
+        text-[16px] font-semibold leading-[100%] tracking-[-0.7px] text-white
+
+        after:absolute
+        after:left-1/2
+        after:-bottom-3
+        after:h-[2px]
+        after:w-6
+        after:-translate-x-1/2
+        after:scale-x-0
+        after:bg-white
+        after:content-['']
+        after:transition-transform
+        after:duration-200
+
+        hover:after:scale-x-100">
+              shop
+            </a>
+          </li>
+
+          <li>
+            <a
+                    href="#"
+                    class="
+        relative
+        text-[16px] font-semibold leading-[100%] tracking-[-0.7px] text-white
+
+        after:absolute
+        after:left-1/2
+        after:-bottom-3
+        after:h-[2px]
+        after:w-6
+        after:-translate-x-1/2
+        after:scale-x-0
+        after:bg-white
+        after:content-['']
+        after:transition-transform
+        after:duration-200
+
+        hover:after:scale-x-100">
+              about
+            </a>
+          </li>
+
+          <li>
+            <a
+                    href="#"
+                    class="
+        relative
+        text-[16px] font-semibold leading-[100%] tracking-[-0.7px] text-white
+
+        after:absolute
+        after:left-1/2
+        after:-bottom-3
+        after:h-[2px]
+        after:w-6
+        after:-translate-x-1/2
+        after:scale-x-0
+        after:bg-white
+        after:content-['']
+        after:transition-transform
+        after:duration-200
+
+        hover:after:scale-x-100"
+            >
+              contact
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Slider controls -->
+    <div
+            class="absolute right-0 bottom-0 z-10 flex lg:translate-x-full"
+    >
+      <button
+              id="left-button"
+              class="flex h-14 w-14 items-center justify-center bg-black hover:bg-[#444] lg:h-20 lg:w-20"
+              aria-label="Previous slide"
+      >
+        <img src="/src/assets/left.svg" alt="">
+      </button>
+
+      <button
+              id="right-button"
+              class="flex h-14 w-14 items-center justify-center bg-black hover:bg-[#444] lg:h-20 lg:w-20"
+              aria-label="Next slide"
+      >
+        <img src="/src/assets/right.svg" alt="">
+      </button>
+    </div>
+
+  </main>
+
+  <div id="dark" class="hidden fixed inset-0 bg-black/50 z-40"></div>
+  <div class="py-17 px-8 lg:basis-2/5 lg:px-25 lg:py-35">
+    <h2 id="title" class="text-[40px] font-semibold tracking-[-2px] text-black lg:text-[48px] leading-[90%] lg:w-100"></h2>
+    <p id="description" class="mt-4 text-[#A0A0A0] text-[16px] font-medium tracking-[-0.5px] leading-[140%] lg:w-100 lg:mt-2"></p>
+    <div class="mt-8 flex flex-row items-center justify-between md:justify-normal md:gap-6">
+      <p class="text-[15px] text-black uppercase font-medium tracking-[12.5px]">shop now</p>
+      <button class="block"><img src="src/assets/shop_now_button.svg" alt="shop button"></button>
+    </div>
+  </div>
+</div>
+<!--<div class="bg-[url(/src/assets/image-about-dark.jpg)] w-105 h-70 bg-no-repeat bg-cover"></div> -->
+<div class="lg:flex lg:flex-row"><img class="block h-full w-full object-cover" src="/src/assets/image-about-dark.jpg" alt="image about">
+  <div class="px-8 py-12.5 lg:py-16 lg:px-12">
+    <h3 class="uppercase text-justify text-[14px] font-bold leading-5.5 tracking-[5.8px]">About our furniture</h3>
+    <p class="mt-4 text-[16px] font-medium leading-[140%] tracking-[-0.5px] text-[#A0A0A0]">Our multifunctional
+      collection blends design and function to suit your individual taste. Make each room unique, or pick a cohesive
+      theme that best express your interests and what inspires you. Find the furniture pieces you need, from traditional
+      to contemporary styles or anything in between. Product specialists are available to help you create your dream
+      space. </p>
+  </div>
+  <img class="block h-full w-full object-cover" src="/src/assets/image-about-light.jpg" alt="image about"></div>
+<script type="module" src="/src/main.js"></script>
+
+</body>
+</html>
